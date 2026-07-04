@@ -2,32 +2,32 @@
 
 @theme {
   /* Superficies */
-  --color-white: #FFFFFF;         /* surface: blanco limpio para cards y header */
-  --color-bg: #FBF9F4;            /* background principal: blanco cálido */
-  --color-mist: #EAF3F1;          /* background alterno: aqua muy suave */
-  --color-mist-deep: #DDEEEA;     /* variante un poco más marcada del mist, para chips/acentos */
+  --color-white: #FFFFFF;
+  --color-bg: #FFFCF8;
+  --color-mist: #ECFBF9;
+  --color-mist-deep: #CFF3EE;
 
   /* Texto */
-  --color-ink: #232A2D;           /* texto principal: gris carbón, no negro puro */
-  --color-ink-soft: #55666C;      /* texto secundario: gris azulado */
+  --color-ink: #1D2B2F;
+  --color-ink-soft: #5E7378;
 
   /* Marca */
-  --color-primary: #1F4B57;       /* azul petróleo profesional */
-  --color-primary-hover: #163841; /* hover: versión más oscura */
-  --color-accent: #3FA893;        /* teal/mint suave para detalles */
-  --color-accent-soft: #E3F3EF;   /* tinte de acento para chips/fondos sutiles */
+  --color-primary: #0E8F8F;
+  --color-primary-hover: #0A7476;
+  --color-accent: #63D7C8;
+  --color-accent-soft: #E2FAF7;
 
   /* Bordes y foco */
-  --color-border: #DCE6E4;        /* azul grisáceo muy suave */
-  --color-ring: #2F9C8D;          /* teal visible y accesible */
+  --color-border: #D4ECE8;
+  --color-ring: #20B8AD;
 
   --font-serif: "Fraunces", serif;
   --font-sans: "Work Sans", sans-serif;
 
   --radius-xs: 4px;
 
-  --shadow-soft: 0 1px 2px rgba(31, 58, 65, 0.04), 0 12px 28px -16px rgba(31, 58, 65, 0.16);
-  --shadow-soft-lg: 0 2px 4px rgba(31, 58, 65, 0.05), 0 20px 40px -18px rgba(31, 58, 65, 0.2);
+  --shadow-soft: 0 1px 2px rgba(14, 116, 118, 0.04), 0 12px 28px -16px rgba(14, 116, 118, 0.16);
+  --shadow-soft-lg: 0 2px 4px rgba(14, 116, 118, 0.05), 0 20px 40px -18px rgba(14, 116, 118, 0.2);
 }
 
 @layer base {
