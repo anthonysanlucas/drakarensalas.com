@@ -1,22 +1,54 @@
 @import "tailwindcss";
 
 @theme {
-  --color-white: #FFFFFF;
-  --color-mist: #F4F8FA;
-  --color-line: #DCE6EA;
-  --color-ink: #20282C;
-  --color-ink-soft: #5B6A70;
-  --color-blue: #4F7E93;
-  --color-blue-deep: #375A69;
-  --color-blue-pale: #E4F0F4;
+  /* Superficies */
+  --color-white: #FFFFFF;         /* surface: blanco limpio para cards y header */
+  --color-bg: #FBF9F4;            /* background principal: blanco cálido */
+  --color-mist: #EAF3F1;          /* background alterno: aqua muy suave */
+  --color-mist-deep: #DDEEEA;     /* variante un poco más marcada del mist, para chips/acentos */
+
+  /* Texto */
+  --color-ink: #232A2D;           /* texto principal: gris carbón, no negro puro */
+  --color-ink-soft: #55666C;      /* texto secundario: gris azulado */
+
+  /* Marca */
+  --color-primary: #1F4B57;       /* azul petróleo profesional */
+  --color-primary-hover: #163841; /* hover: versión más oscura */
+  --color-accent: #3FA893;        /* teal/mint suave para detalles */
+  --color-accent-soft: #E3F3EF;   /* tinte de acento para chips/fondos sutiles */
+
+  /* Bordes y foco */
+  --color-border: #DCE6E4;        /* azul grisáceo muy suave */
+  --color-ring: #2F9C8D;          /* teal visible y accesible */
 
   --font-serif: "Fraunces", serif;
   --font-sans: "Work Sans", sans-serif;
 
-  --radius-xs: 2px;
+  --radius-xs: 4px;
+
+  --shadow-soft: 0 1px 2px rgba(31, 58, 65, 0.04), 0 12px 28px -16px rgba(31, 58, 65, 0.16);
+  --shadow-soft-lg: 0 2px 4px rgba(31, 58, 65, 0.05), 0 20px 40px -18px rgba(31, 58, 65, 0.2);
 }
 
 @layer base {
+  ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-primary);
+  }
+
+  a,
+  button {
+    outline-offset: 2px;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
   [data-reveal] {
     opacity: 0;
     transform: translateY(0.75rem);
@@ -24,7 +56,7 @@
   }
   [data-reveal].is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
   @media (prefers-reduced-motion: reduce) {
     [data-reveal] {
@@ -32,5 +64,36 @@
       transform: none;
       transition: none;
     }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[12px] font-semibold uppercase tracking-[0.11em] text-primary;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14.5px]
+      font-medium text-white shadow-soft transition-all duration-200
+      hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-soft-lg
+      active:translate-y-0 active:shadow-soft
+      motion-reduce:transition-none motion-reduce:hover:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-white px-5 py-3
+      text-[14.5px] font-medium text-primary transition-all duration-200
+      hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft
+      active:translate-y-0
+      motion-reduce:transition-none motion-reduce:hover:translate-y-0;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-white shadow-soft transition-all duration-200
+      motion-reduce:transition-none;
+  }
+
+  .icon-tile {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-primary;
   }
 }

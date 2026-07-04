@@ -4,12 +4,12 @@ const WHATSAPP_URL = 'https://wa.me/593998269425';
 
 <header
   id="topbar"
-  class="sticky top-0 z-20 border-b border-transparent bg-white/85 backdrop-blur-md transition-colors duration-300"
+  class="sticky top-0 z-20 border-b border-transparent bg-bg/80 backdrop-blur-md transition-colors duration-300"
 >
-  <div class="mx-auto flex max-w-[1080px] items-center justify-between px-7 py-4">
-    <span class="font-serif text-[17px] font-medium text-ink">Karen Salas</span>
+  <div class="mx-auto flex max-w-285 items-center justify-between px-6 py-4 sm:px-8">
+    <span class="font-serif text-lg font-medium tracking-[-0.01em] text-ink">Karen Salas</span>
     <a
-      class="inline-flex items-center gap-2 rounded-xs border border-blue-deep bg-blue-deep px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:bg-ink motion-reduce:hover:translate-y-0"
+      class="btn-primary px-4! py-2.5! text-[13.5px]!"
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener"
@@ -22,7 +22,7 @@ const WHATSAPP_URL = 'https://wa.me/593998269425';
 <script>
   const topbar = document.getElementById('topbar');
   const onScroll = () => {
-    topbar?.classList.toggle('border-line', window.scrollY > 8);
+    topbar?.classList.toggle('border-border', window.scrollY > 8);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 </script>
