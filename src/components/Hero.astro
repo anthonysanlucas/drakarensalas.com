@@ -1,0 +1,58 @@
+---
+const WHATSAPP_URL = 'https://wa.me/593998269425';
+---
+
+<section class="relative overflow-hidden py-16 sm:py-22 lg:py-24">
+  <svg
+    class="pointer-events-none absolute -right-40 -top-10 w-[560px] max-w-[60vw] opacity-80 motion-reduce:opacity-40"
+    viewBox="0 0 640 400"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path d="M20 260C160 380 480 380 620 200" stroke="#4F7E93" stroke-opacity="0.18" stroke-width="1.5"></path>
+    <path d="M60 300C190 400 470 400 600 240" stroke="#4F7E93" stroke-opacity="0.12" stroke-width="1.5"></path>
+  </svg>
+
+  <div class="relative mx-auto max-w-[1080px] px-7">
+    <div class="grid items-center gap-10 lg:grid-cols-[1fr_340px] lg:gap-16">
+      <div class="order-2 mx-auto aspect-[4/5] w-full max-w-[260px] overflow-hidden rounded-xs bg-blue-pale lg:order-2 lg:mx-0 lg:max-w-none">
+        <img
+          src="https://placehold.co/680x850/E4F0F4/4F7E93?text=Foto+de+perfil&font=roboto"
+          alt="Retrato profesional de la Dra. Karen Salas — imagen provisional, pendiente reemplazo por foto real"
+          width="680"
+          height="850"
+          class="h-full w-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="order-1 max-w-[560px] lg:order-1" data-reveal>
+        <span class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-blue">Odontóloga</span>
+        <h1 class="mt-3.5 font-serif text-[clamp(38px,5.4vw,58px)] font-medium leading-[1.05] tracking-[-0.01em] text-ink">
+          Dra. Karen<br />Salas
+        </h1>
+        <p class="mt-5.5 max-w-[460px] text-[19px] font-light leading-relaxed text-ink-soft">
+          Atención dental cuidadosa, cercana y responsable, con comunicación clara en cada consulta.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-5">
+          <a
+            class="inline-flex items-center gap-2 rounded-xs border border-blue-deep bg-blue-deep px-5.5 py-3 text-[14.5px] font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-ink hover:bg-ink motion-reduce:hover:translate-y-0"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener"
+          >
+            Agendar por WhatsApp
+          </a>
+          <span class="flex items-center gap-1.5 text-sm text-ink-soft">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z"></path>
+              <circle cx="12" cy="9.5" r="2.4"></circle>
+            </svg>
+            Guayaquil, Ecuador
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

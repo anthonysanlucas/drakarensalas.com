@@ -1,0 +1,42 @@
+---
+const commitments = [
+  {
+    quote: 'Atiendo cada caso con seriedad y le doy seguimiento hasta que quede resuelto.',
+    label: 'Atención responsable',
+  },
+  {
+    quote: 'Quiero que te sientas cómodo/a para preguntar todo lo que necesites, sin apuro.',
+    label: 'Trato cercano',
+  },
+  {
+    quote: 'Reviso cada detalle, desde el diagnóstico hasta la explicación del tratamiento.',
+    label: 'Cuidado en el detalle',
+  },
+  {
+    quote: 'Explico todo en un lenguaje simple, sin tecnicismos ni información a medias.',
+    label: 'Comunicación clara',
+  },
+];
+---
+
+<section id="confianza" class="py-24 lg:py-32">
+  <div class="mx-auto max-w-[1080px] px-7">
+    <div class="mb-11 flex items-baseline gap-4" data-reveal>
+      <span class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-blue">Mi compromiso contigo</span>
+      <span class="h-px flex-1 bg-line"></span>
+    </div>
+
+    <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
+      {commitments.map((item) => (
+        <div class="flex flex-col gap-3.5 rounded-xs border border-line bg-white p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue motion-reduce:hover:translate-y-0">
+          <span class="font-serif text-[34px] leading-none text-blue" aria-hidden="true">”</span>
+          <p class="text-[14.5px] italic leading-relaxed text-ink">{item.quote}</p>
+          <span class="mt-auto flex items-center gap-2 text-[12.5px] not-italic text-ink-soft">
+            <span class="inline-block h-px w-4 bg-blue"></span>
+            {item.label}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

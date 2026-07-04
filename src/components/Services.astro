@@ -1,0 +1,47 @@
+---
+const services = [
+  {
+    title: 'Evaluación odontológica',
+    description: 'Revisión completa para conocer el estado actual de tu salud oral.',
+    icon: 'M12 3c-3 0-5 2-5 5 0 4 1 6 1.5 9 .3 1.6 1 2.5 2 2.5s1.3-1.4 1.5-3c.2-1.4.5-2 1-2s.8.6 1 2c.2 1.6.5 3 1.5 3s1.7-.9 2-2.5c.5-3 1.5-5 1.5-9 0-3-2-5-5-5-1 0-1.5.5-2 .5s-1-.5-2-.5Z',
+  },
+  {
+    title: 'Limpieza dental',
+    description: 'Eliminación de placa y sarro para mantener tu boca sana.',
+    icon: 'M4 4l6 6M20 4l-6 6M4 20l6-6M20 20l-6-6',
+    extra: true,
+  },
+  {
+    title: 'Prevención y cuidado oral',
+    description: 'Recomendaciones prácticas para cuidar tu salud dental a diario.',
+    icon: 'M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z',
+  },
+  {
+    title: 'Orientación para tratamientos',
+    description: 'Explicación clara de opciones y pasos a seguir, sin presiones.',
+    icon: 'M21 11.5a8.5 8.5 0 0 1-11.8 7.8L4 21l1.7-5.2A8.5 8.5 0 1 1 21 11.5Z',
+  },
+];
+---
+
+<section class="bg-mist py-24 lg:py-32" id="servicios">
+  <div class="mx-auto max-w-[1080px] px-7">
+    <div class="mb-11 flex items-baseline gap-4" data-reveal>
+      <span class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-blue">Servicios</span>
+      <span class="h-px flex-1 bg-line"></span>
+    </div>
+
+    <div class="grid grid-cols-1 gap-px border border-line bg-line md:grid-cols-2" data-reveal>
+      {services.map((service) => (
+        <div class="bg-white p-9 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-pale/40 motion-reduce:hover:translate-y-0">
+          <svg class="mb-5 h-6.5 w-6.5 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d={service.icon}></path>
+            {service.extra && <circle cx="12" cy="12" r="3"></circle>}
+          </svg>
+          <h3 class="text-lg font-medium text-ink">{service.title}</h3>
+          <p class="mt-2.5 text-[14.5px] leading-relaxed text-ink-soft">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
