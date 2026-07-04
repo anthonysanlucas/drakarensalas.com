@@ -1,28 +1,43 @@
 ---
-const WHATSAPP_URL = 'https://wa.me/593998269425';
+import { siWhatsapp } from "simple-icons";
+
+const WHATSAPP_URL = "https://wa.me/593998269425";
 ---
 
 <header
   id="topbar"
   class="sticky top-0 z-20 border-b border-transparent bg-bg/80 backdrop-blur-md transition-colors duration-300"
 >
-  <div class="mx-auto flex max-w-285 items-center justify-between px-6 py-4 sm:px-8">
-    <span class="font-serif text-lg font-medium tracking-[-0.01em] text-ink">Karen Salas</span>
+  <div
+    class="mx-auto flex max-w-285 items-center justify-between px-6 py-4 sm:px-8"
+  >
+    <span class="font-serif text-lg font-medium tracking-[-0.01em] text-ink"
+      >Dra. Karen Salas</span
+    >
     <a
       class="btn-primary px-4! py-2.5! text-[13.5px]!"
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener"
     >
-      Escribir por WhatsApp
+      <svg
+        viewBox="0 0 24 24"
+        class="size-4 shrink-0"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d={siWhatsapp.path}></path>
+      </svg>
+
+      Contáctame
     </a>
   </div>
 </header>
 
 <script>
-  const topbar = document.getElementById('topbar');
+  const topbar = document.getElementById("topbar");
   const onScroll = () => {
-    topbar?.classList.toggle('border-border', window.scrollY > 8);
+    topbar?.classList.toggle("border-border", window.scrollY > 8);
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener("scroll", onScroll, { passive: true });
 </script>
