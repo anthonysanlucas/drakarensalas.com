@@ -21,8 +21,8 @@ jobs:
       # Instalar dependencias, compilar y construir el sitio Astro
       - name: Install dependencies, build, and upload your site
         uses: withastro/action@v3
-        env:
-          PUBLIC_GS_API_URL: 'https://script.google.com/macros/s/AKfycbxYlFrkler72r3bCIxLF2xryxGvwCF8EZrriPrEa_gvYoJhvYe5yXcUwTgUn_nffKoVhw/exec'
+        with:
+          node-version: 22.12.0          
 
   deploy:
     needs: build
