@@ -1,0 +1,46 @@
+---
+const testimonials = [
+  {
+    quote: 'Desde la primera cita me sentí escuchada. La Dra. Salas explica todo con calma y sin apuros.',
+    name: 'María Fernanda C.',
+    treatment: 'Limpieza dental',
+  },
+  {
+    quote: 'Le tenía mucho miedo al dentista y ahora voy tranquilo a mis controles. Trato muy cercano.',
+    name: 'Andrés P.',
+    treatment: 'Evaluación odontológica',
+  },
+  {
+    quote: 'Me explicó cada paso del tratamiento antes de empezar, sin tecnicismos. Se nota la experiencia.',
+    name: 'Lucía R.',
+    treatment: 'Orientación para tratamiento',
+  },
+  {
+    quote: 'Excelente atención y mucha paciencia con mis preguntas. Totalmente recomendada.',
+    name: 'Jorge M.',
+    treatment: 'Prevención y cuidado oral',
+  },
+];
+---
+
+<section id="testimonios" class="bg-bg py-20 lg:py-28">
+  <div class="mx-auto max-w-285 px-6 sm:px-8">
+    <div class="mb-10 flex items-baseline gap-4" data-reveal>
+      <span class="eyebrow">Testimonios</span>
+      <span class="h-px flex-1 bg-border"></span>
+    </div>
+
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
+      {testimonials.map((item) => (
+        <div class="card flex flex-col gap-3.5 p-6 hover:-translate-y-0.5 hover:border-accent hover:shadow-soft-lg motion-reduce:hover:translate-y-0">
+          <span class="font-serif text-[34px] leading-none text-accent" aria-hidden="true">”</span>
+          <p class="text-[14.5px] leading-relaxed text-ink italic">{item.quote}</p>
+          <div class="mt-auto">
+            <span class="block text-[13.5px] font-medium text-ink not-italic">{item.name}</span>
+            <span class="block text-[12.5px] text-ink-soft not-italic">{item.treatment}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

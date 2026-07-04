@@ -2,6 +2,13 @@
 import { siWhatsapp } from "simple-icons";
 
 const WHATSAPP_URL = "https://wa.me/593998269425";
+
+const NAV_LINKS = [
+  { href: "#perfil", label: "Sobre mí" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#testimonios", label: "Testimonios" },
+  { href: "#contacto", label: "Contacto" },
+];
 ---
 
 <header
@@ -14,6 +21,18 @@ const WHATSAPP_URL = "https://wa.me/593998269425";
     <span class="font-serif text-lg font-medium tracking-[-0.01em] text-ink"
       >Dra. Karen Salas</span
     >
+    <nav class="hidden items-center gap-8 md:flex">
+      {
+        NAV_LINKS.map((link) => (
+          <a
+            href={link.href}
+            class="text-[14.5px] text-ink-soft transition-colors duration-200 hover:text-ink"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
     <a
       class="btn-primary px-4! py-2.5! text-[13.5px]!"
       href={WHATSAPP_URL}
